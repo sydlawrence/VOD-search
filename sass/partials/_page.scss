@@ -1,0 +1,162 @@
+@import "compass/css3";
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  // font-family: Georgia, serif;
+}
+
+//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
+h1, h2, h3, h4, h5, h6 {
+  // Bold might not be the best choice if you are
+  // embedding a @font-face that's already bold
+  font-weight: bold;
+}
+
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
+
+strong, th {
+  font-weight: bold;
+}
+
+small {
+  // Use font-size mixin to convert to percentage for YUI
+  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
+  @include font-size(11px);  // approx 85% when base-font-size eq 13px
+}
+
+// Add the 'required' attribute on your
+// inputs if you want to use these
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid {
+  @include border-radius(1px);
+  @include single-box-shadow(red, 0, 0, 5px, 0);
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+body {}
+
+#container {}
+
+header {}
+
+#main {}
+
+footer {}
+
+
+header {
+  padding-top:20px;
+}
+h1 {
+  font-weight:bold;
+  font-size:20px;
+  text-align:center; 
+}
+
+#query {
+  margin:20px auto;
+  display:block;
+  position:relative;
+  width:700px;
+  padding:10px;
+  font-size:24px;
+}
+
+#search_form button {
+  width:100px;
+  margin:0 auto;
+  position: relative;
+  display:block;
+}
+
+
+
+
+#results {
+  margin-top:30px;  
+
+  li {
+    display:block;
+    list-style:none;
+    width:610px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom:20px;
+ 
+
+    a {
+      text-decoration:none;
+      color:#000;
+      display:block;
+      position:relative;
+      padding:5px;
+      -webkit-transition:background 500ms;
+      -moz-transition:background 500ms;
+      -ms-transition:background 500ms;
+      -o-transition:background 500ms;
+      transition:background 500ms;
+      background:#fff;
+      &:hover {
+        background:#aaa;
+      }
+    }
+
+    .title {
+      display:block;
+      float:none;
+      width:380px;
+      font-size:2em;
+      font-weight:bold;
+      padding-left:220px;
+    }
+    .description {
+      display:block;
+      float:none;
+      width:380px;
+      padding-left:220px;
+    }
+    .img {
+      width:200px;
+      float:left;
+      margin-bottom:0;
+      padding-bottom:0;
+      img {
+        width:200px;
+        min-height:100px;
+        background:#000;
+        margin-bottom:0;
+        padding-bottom:0;
+      }
+    }
+
+    .resolver_name {
+      display:block;
+      margin-top:10px;
+      font-size:0.8em;
+      padding-left:220px;
+
+    }
+
+    .resolver_icon {
+      position:absolute;
+      top:10px;
+      left:10px;
+      img {
+        height:20px;
+      }
+    }
+  }
+}
